@@ -18,3 +18,4 @@ packages/
 *.exe
 # Output generato a runtime
 /performance_data.csv
+/assets/performance_data.csv

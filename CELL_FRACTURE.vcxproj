@@ -19,79 +19,70 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AnimatedModel.cpp" />
-    <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Character.cpp" />
-    <ClCompile Include="CollisionSystem.cpp" />
-    <ClCompile Include="ComputeShader.cpp" />
-    <ClCompile Include="DebugUI.cpp" />
-    <ClCompile Include="FileUtils.cpp" />
-    <ClCompile Include="glad.c" />
-    <ClCompile Include="InputHandler.cpp" />
-    <ClCompile Include="Logger.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Mesh.cpp" />
-    <ClCompile Include="Model.cpp" />
-    <ClCompile Include="PerformanceMonitor.cpp" />
-    <ClCompile Include="PhysicsSystem.cpp" />
-    <ClCompile Include="PhysicsSystemCPU.cpp" />
-    <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="Skybox.cpp" />
-    <ClCompile Include="StateManager.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="src\AnimatedModel.cpp" />
+    <ClCompile Include="src\Animation.cpp" />
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Character.cpp" />
+    <ClCompile Include="src\CollisionSystem.cpp" />
+    <ClCompile Include="src\ComputeShader.cpp" />
+    <ClCompile Include="src\DebugUI.cpp" />
+    <ClCompile Include="src\FileUtils.cpp" />
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\InputHandler.cpp" />
+    <ClCompile Include="src\Logger.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Mesh.cpp" />
+    <ClCompile Include="src\Model.cpp" />
+    <ClCompile Include="src\PerformanceMonitor.cpp" />
+    <ClCompile Include="src\PhysicsSystem.cpp" />
+    <ClCompile Include="src\PhysicsSystemCPU.cpp" />
+    <ClCompile Include="src\Renderer.cpp" />
+    <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\Skybox.cpp" />
+    <ClCompile Include="src\StateManager.cpp" />
+    <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AnimatedModel.h" />
-    <ClInclude Include="Animation.h" />
-    <ClInclude Include="Application.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Character.h" />
-    <ClInclude Include="CollisionSystem.h" />
-    <ClInclude Include="ComputeShader.h" />
-    <ClInclude Include="DebugBB.h" />
-    <ClInclude Include="DebugUI.h" />
-    <ClInclude Include="FileUtils.h" />
-    <ClInclude Include="glad.h" />
-    <ClInclude Include="InputHandler.h" />
-    <ClInclude Include="lib.h" />
-    <ClInclude Include="Logger.h" />
-    <ClInclude Include="Mesh.h" />
-    <ClInclude Include="Model.h" />
-    <ClInclude Include="PerformanceMonitor.h" />
-    <ClInclude Include="PhysicsSystem.h" />
-    <ClInclude Include="PhysicsSystemCPU.h" />
-    <ClInclude Include="Renderer.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="Skybox.h" />
-    <ClInclude Include="StateManager.h" />
-    <ClInclude Include="stb_image.h" />
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="src\AnimatedModel.h" />
+    <ClInclude Include="src\Animation.h" />
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Character.h" />
+    <ClInclude Include="src\CollisionSystem.h" />
+    <ClInclude Include="src\ComputeShader.h" />
+    <ClInclude Include="src\DebugBB.h" />
+    <ClInclude Include="src\DebugUI.h" />
+    <ClInclude Include="src\FileUtils.h" />
+    <ClInclude Include="src\glad.h" />
+    <ClInclude Include="src\InputHandler.h" />
+    <ClInclude Include="src\lib.h" />
+    <ClInclude Include="src\Logger.h" />
+    <ClInclude Include="src\Mesh.h" />
+    <ClInclude Include="src\Model.h" />
+    <ClInclude Include="src\PerformanceMonitor.h" />
+    <ClInclude Include="src\PhysicsSystem.h" />
+    <ClInclude Include="src\PhysicsSystemCPU.h" />
+    <ClInclude Include="src\Renderer.h" />
+    <ClInclude Include="src\Shader.h" />
+    <ClInclude Include="src\Skybox.h" />
+    <ClInclude Include="src\StateManager.h" />
+    <ClInclude Include="src\stb_image.h" />
+    <ClInclude Include="src\Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assimp-vc142-mt.dll" />
-    <None Include="assimp-vc142-mtd.dll" />
-    <None Include="character_fragment.glsl" />
-    <None Include="character_vertex.glsl" />
-    <None Include="compute_physics.glsl" />
-    <None Include="fragment.glsl" />
+    <None Include="assets\character_fragment.glsl" />
+    <None Include="assets\character_vertex.glsl" />
+    <None Include="assets\compute_physics.glsl" />
+    <None Include="assets\fragment.glsl" />
     <None Include="packages.config" />
-    <None Include="skybox_fragment.glsl" />
-    <None Include="skybox_vertex.glsl" />
-    <None Include="vertex.glsl" />
+    <None Include="assets\skybox_fragment.glsl" />
+    <None Include="assets\skybox_vertex.glsl" />
+    <None Include="assets\vertex.glsl" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="skybox\nx.png" />
-    <Image Include="skybox\ny.png" />
-    <Image Include="skybox\nz.png" />
-    <Image Include="skybox\px.png" />
-    <Image Include="skybox\py.png" />
-    <Image Include="skybox\pz.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -218,4 +209,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\glm.1.0.1\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glm.1.0.1\build\native\glm.targets'))" />
   </Target>
+  <PropertyGroup>
+    <LocalDebuggerWorkingDirectory>$(ProjectDir)assets</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

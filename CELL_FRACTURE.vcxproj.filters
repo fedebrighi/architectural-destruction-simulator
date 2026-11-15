@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="File di origine">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="File di intestazione">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="File di risorse">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="File di origine\core">
+      <UniqueIdentifier>{b526a4bd-9b78-49cf-b011-eff0753e2816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di intestazione\core">
+      <UniqueIdentifier>{87102a8d-3cfb-43e6-bde6-868f4c26642f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di intestazione\physics">
+      <UniqueIdentifier>{1f0b3cb0-890c-4990-95a1-112ecf4dfda0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di intestazione\graphics">
+      <UniqueIdentifier>{91e7f876-7de9-4d1d-87ae-130c8dac8994}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di intestazione\utils">
+      <UniqueIdentifier>{16bdcf3a-177e-4660-bae0-dc1220b1ab97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\physics">
+      <UniqueIdentifier>{71abf0a7-77fd-4b03-b784-7b6b7e8f30a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\graphics">
+      <UniqueIdentifier>{4358549e-bdfe-4c51-b107-7434b8d494b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\utils">
+      <UniqueIdentifier>{7d7c2c41-b168-436b-8960-81840256b087}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glad.c">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>File di origine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>File di origine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>File di origine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>File di origine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputeShader.cpp">
+      <Filter>File di origine\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsSystem.cpp">
+      <Filter>File di origine\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionSystem.cpp">
+      <Filter>File di origine\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>File di origine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Skybox.cpp">
+      <Filter>File di origine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>File di origine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUtils.cpp">
+      <Filter>File di origine\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="PerformanceMonitor.cpp">
+      <Filter>File di origine\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>File di origine\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>File di origine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="StateManager.cpp">
+      <Filter>File di origine\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>File di origine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugUI.cpp">
+      <Filter>File di origine\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>File di origine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>File di origine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimatedModel.cpp">
+      <Filter>File di origine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsSystemCPU.cpp">
+      <Filter>File di origine\physics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="glad.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>File di intestazione\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>File di intestazione\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>File di intestazione\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>File di intestazione\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputeShader.h">
+      <Filter>File di intestazione\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsSystem.h">
+      <Filter>File di intestazione\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionSystem.h">
+      <Filter>File di intestazione\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>File di intestazione\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Skybox.h">
+      <Filter>File di intestazione\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>File di intestazione\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="FileUtils.h">
+      <Filter>File di intestazione\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="PerformanceMonitor.h">
+      <Filter>File di intestazione\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>File di intestazione\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>File di intestazione\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>File di intestazione\core</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>File di intestazione\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugUI.h">
+      <Filter>File di intestazione\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>File di intestazione\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>File di intestazione\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedModel.h">
+      <Filter>File di intestazione\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsSystemCPU.h">
+      <Filter>File di intestazione\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugBB.h">
+      <Filter>File di intestazione\utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="assimp-vc142-mt.dll" />
+    <None Include="assimp-vc142-mtd.dll" />
+    <None Include="vertex.glsl" />
+    <None Include="fragment.glsl" />
+    <None Include="compute_physics.glsl" />
+    <None Include="skybox_vertex.glsl" />
+    <None Include="skybox_fragment.glsl" />
+    <None Include="character_vertex.glsl" />
+    <None Include="character_fragment.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="skybox\nx.png">
+      <Filter>File di risorse</Filter>
+    </Image>
+    <Image Include="skybox\ny.png">
+      <Filter>File di risorse</Filter>
+    </Image>
+    <Image Include="skybox\nz.png">
+      <Filter>File di risorse</Filter>
+    </Image>
+    <Image Include="skybox\px.png">
+      <Filter>File di risorse</Filter>
+    </Image>
+    <Image Include="skybox\py.png">
+      <Filter>File di risorse</Filter>
+    </Image>
+    <Image Include="skybox\pz.png">
+      <Filter>File di risorse</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

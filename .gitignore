@@ -1,0 +1,24 @@
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+packages/
+*.user
+*.suo
+*.ipch
+*.db
+*.pdb
+*.ilk
+*.exp
+*.bak
+*.log
+# Binari: non vanno nel repo
+*.dll
+*.exe
+# Asset non ridistribuibili (vedi README)
+*.fbx
+*.fbm/
+textures/
+# Output generato a runtime
+/performance_data.csv

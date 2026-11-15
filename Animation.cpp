@@ -1,3 +1,4 @@
+#define GLM_ENABLE_EXPERIMENTAL
 #include "Animation.h"
 #include "Model.h"
 #include <glm/gtx/quaternion.hpp>

@@ -16,9 +16,5 @@ packages/
 # Binari: non vanno nel repo
 *.dll
 *.exe
-# Asset non ridistribuibili (vedi README)
-*.fbx
-*.fbm/
-textures/
 # Output generato a runtime
 /performance_data.csv

@@ -9,8 +9,6 @@ Real-time 3D simulator of architectural destruction, written in **C++ and OpenGL
 
 ![Simulator scene](docs/screenshot.jpg)
 
-<!-- DEMO-GIF ![Demo](docs/demo.gif) -->
-
 > Experimental Bachelor's thesis, *Computer Science and Engineering*, University of Bologna (October 2025): **"Effetti Visivi Avanzati in CGI: Studio di Compute Shaders e Sistemi di Particelle con Applicazioni a Simulazioni Dinamiche"**.
 
 ## Highlights
@@ -67,43 +65,32 @@ How to read it:
 
 ## Build and run (Windows)
 
+The repository is self-contained: the third-party libraries it needs (GLFW, Assimp and the GLAD/KHR headers) are bundled in `third_party/`, and GLM is restored automatically by NuGet. No manual setup is required.
+
 **Requirements**
 
-- Windows 10/11 and **Visual Studio 2022** (toolset v143, "Desktop development with C++")
+- Windows 10/11 (64-bit)
+- Visual Studio 2022 with the "Desktop development with C++" workload
 - A GPU and driver supporting **OpenGL 4.3** or newer (needed by compute shaders)
-- A dependencies folder at `C:\dependencies_GL_GLFW` (the path is set in the project properties under *C/C++ → Additional Include Directories* and *Linker → Additional Library Directories*; edit it if you put the folder elsewhere):
-
-  ```
-  C:\dependencies_GL_GLFW
-  ├── include
-  │   ├── GL/  GLFW/  KHR/  assimp/  glad/
-  └── lib
-      ├── glfw3.lib                (GLFW 3.4, Windows pre-compiled binaries)
-      └── assimp-vc142-mt.lib      (Assimp built with the vc142 toolset)
-  ```
-
-- GLM 1.0.1 is restored automatically by NuGet (`packages.config`). GLAD (OpenGL 4.3 core) and `stb_image.h` are included in the repository.
 
 **Steps**
 
-1. Clone the repository and set up the dependencies folder as above.
-2. Open `CELL_FRACTURE.sln`, select **Release | x64** and run **Build → Build Solution**.
-3. Copy `assimp-vc142-mt.dll` next to the executable, in `x64\Release\`.
-4. Run from Visual Studio (**Ctrl+F5**). Assets are loaded with relative paths, so the working directory must be the repository root, which is the Visual Studio default.
+1. Clone the repository.
+2. Open `CELL_FRACTURE.sln`, select **Release | x64** and run **Build → Build Solution**. A post-build step copies `assimp-vc142-mt.dll` next to the executable.
+3. Run from Visual Studio (**Ctrl+F5**). The debugging working directory is set to `assets/`, where the program looks for its models, shaders, textures and skybox with relative paths. To start the executable on its own, use `assets/` as working directory, for example `cd assets && ..\x64\Release\CELL_FRACTURE.exe`.
+
+Only the **Release | x64** configuration is supported.
 
 ## Repository layout
 
-The structure is flat on purpose: models, shaders and textures are loaded with relative paths.
-
-| Area | Files |
+| Folder | Content |
 |---|---|
-| Application and rendering | `main.cpp`, `Application.*`, `Window.*`, `Renderer.*`, `Camera.*`, `Shader.*`, `Mesh.*`, `Model.*`, `Skybox.*`, `StateManager.*`, `InputHandler.*` |
-| GPU physics | `ComputeShader.*`, `PhysicsSystem.*`, `compute_physics.glsl` |
-| CPU physics | `PhysicsSystemCPU.*` |
-| Character and animation | `Character.*`, `AnimatedModel.*`, `Animation.*`, `*_mostro.fbx`, `textures/` |
-| Collisions and debug | `CollisionSystem.*`, `DebugBB.h`, `DebugUI.*`, `PerformanceMonitor.*`, `Logger.*` |
-| Scene assets | `*.obj` / `*.mtl` (intact and fractured models), `skybox/` |
-| Documentation | `docs/` |
+| `src/` | All C++ sources and headers: application, rendering, GPU physics (`ComputeShader`, `PhysicsSystem`), CPU physics (`PhysicsSystemCPU`), character and animation, collisions, debug tools, plus GLAD and `stb_image.h` |
+| `assets/` | Everything loaded at runtime with relative paths: GLSL shaders (including `compute_physics.glsl`), `.obj` / `.mtl` models (intact and fractured), Mixamo FBX files, `textures/` and `skybox/` |
+| `third_party/` | Bundled third-party binaries and headers: GLFW 3.4 (static library), Assimp (import library and DLL, vc142 build), GLAD/KHR headers, with their licence files |
+| `docs/` | Thesis, defence slides, screenshot and chart |
+
+The root holds the Visual Studio solution (`CELL_FRACTURE.sln`, `CELL_FRACTURE.vcxproj`) and `packages.config`.
 
 ## Documentation
 
@@ -119,6 +106,8 @@ Small changes made at upload time, so that a clean clone builds:
 - removed unused GLEW libraries from the linker settings;
 - defined `GLM_ENABLE_EXPERIMENTAL` in `Animation.cpp`, which includes a GLM experimental extension;
 - left out the stale `CMakeLists.txt` of the original folder: the project builds with the Visual Studio solution.
+- organised the files into `src/`, `assets/` and `docs/`, and set the Visual Studio debugging working directory to `assets/`, so no source path had to change.
+- bundled the third-party libraries in `third_party/` and added a post-build step that copies the Assimp DLL, so a clean clone builds without any manual setup.
 
 ## Credits and licences
 
@@ -126,7 +115,7 @@ Small changes made at upload time, so that a clean clone builds:
 - **Character and animations:** from [Mixamo](https://www.mixamo.com) (Adobe), included here only to let the simulator run as demonstrated. They are not covered by this repository's licence and must not be extracted or redistributed separately.
 - **Low-poly models** (bus, tree, phone booth, building): from [Poly Pizza](https://poly.pizza), fractured with Blender's Cell Fracture. Each model keeps the licence and credit of its original author, listed on its Poly Pizza page.
 - **Skybox:** from [OpenGameArt.org, "Urban Skyboxes"](https://opengameart.org/content/urban-skyboxes); author and licence are on the original page.
-- **Libraries:** [GLFW](https://www.glfw.org), [GLAD](https://glad.dav1d.de), [GLM](https://github.com/g-truc/glm), [Assimp](https://www.assimp.org) and [stb_image](https://github.com/nothings/stb), each under its own open-source licence.
+- **Libraries:** [GLFW](https://www.glfw.org) (zlib licence) and [Assimp](https://www.assimp.org) (BSD 3-Clause licence) are bundled in `third_party/` together with their licence files; [GLAD](https://glad.dav1d.de), [GLM](https://github.com/g-truc/glm) (restored by NuGet) and [stb_image](https://github.com/nothings/stb) are open-source as well.
 - **References:** the skeletal-animation approach follows the [OGLdev tutorial 38](https://ogldev.org/www/tutorial38/tutorial38.html); the compute-shader material draws on the Khronos OpenGL Wiki.
 
 ---

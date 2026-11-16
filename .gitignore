@@ -19,3 +19,4 @@ packages/
 # Output generato a runtime
 /performance_data.csv
 /assets/performance_data.csv
+!/third_party/bin/*.dll
